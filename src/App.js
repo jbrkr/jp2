@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import Translate from "./translate/translation"
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -19,14 +20,13 @@ class LambdaDemo extends Component {
 
   render() {
     const { loading, msg } = this.state
-
     return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
+      <div>
+        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "ignore"}</button>
+        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "these"}</button>
         <br />
         <span>{msg}</span>
-      </p>
+      </div>
     )
   }
 }
@@ -36,12 +36,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          
           <p>
-            Mess with <code>src/App.js</code> and save to reload.
+            Fluent Phrase Translation.
           </p>
           <LambdaDemo />
         </header>
+        <Translate/>
       </div>
     )
   }
