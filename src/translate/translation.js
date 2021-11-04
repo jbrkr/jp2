@@ -1,13 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 import DataService from "./services";
 
-
 function Translate(){
 
   const [lang, setLang] = React.useState('');
   const [srcText, setSrcText] = React.useState('');
   const [textValue, setTextValue] = useState("");
-
   const [outputText, setOutputText] = React.useState('');
 
   const handleTextChange = e => {
@@ -41,7 +39,7 @@ function Translate(){
   }
 
 
-    const frenchTranslation = () => {
+  const frenchTranslation = () => {
     console.log("Lang: ")
     console.log(lang)
     console.log("text")
@@ -55,7 +53,7 @@ function Translate(){
     })
   }
 
-    const italianTranslation = () => {
+  const italianTranslation = () => {
     console.log("Lang: ")
     console.log(lang)
     console.log("text")
@@ -69,7 +67,7 @@ function Translate(){
     })
   }
 
-    const spanishTranslation = () => {
+  const spanishTranslation = () => {
     console.log("Lang: ")
     console.log(lang)
     console.log("text")
